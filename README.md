@@ -1,30 +1,25 @@
-# Guestbook
+# 謝罪テンプレート
 
-Guestbook is an example application showing basic usage of Google App
-Engine. Users can read & write text messages and optionaly log-in with
-their Google account. Messages are stored in App Engine (NoSQL)
-High Replication Datastore (HRD) and retrieved using a strongly consistent
-(ancestor) query.
+緊急時に謝罪のみを行うためのウェブサイトに差し替えるためのGoogle App Engine用テンプレートです。
+別途、DNSのレコード設定と併用することで、以下のエントリのような効果を得ることができます。
 
-## Products
-- [App Engine][1]
+[乙武さん不倫の謝罪ホームページに見るプロの犯行][1]
 
-## Language
-- [Python][2]
+Google App Engine上の静的ファイルはGoogleのEdge Cacheにて配信されますので、比較的高速（ややレイテンシは遅いようです）に安定して提供することが可能です。
 
-## APIs
-- [NDB Datastore API][3]
-- [Users API][4]
+設定するドメイン配下のURLは全て謝罪ページの表示となりますので、余計なコンテンツを閲覧されずに済む一方、もちろん全ての情報配信を止めてしまうこととなるため、使いみちはご注意ください。ただし可逆的速やかに復旧可能です。
 
-## Dependencies
-- [webapp2][5]
-- [jinja2][6]
-- [Twitter Bootstrap][7]
+## 使い方
 
-[1]: https://developers.google.com/appengine
-[2]: https://python.org
-[3]: https://developers.google.com/appengine/docs/python/ndb/
-[4]: https://developers.google.com/appengine/docs/python/users/
-[5]: http://webapp-improved.appspot.com/
-[6]: http://jinja.pocoo.org/docs/
-[7]: http://twitter.github.com/bootstrap/
+ターミナルにて任意のディレクトリ以下で以下のコマンドを打ち、テンプレートファイル群をコピーします。
+
+`git clone https://github.com/yoheinishikubo/template-to-flee.git`
+
+ファイル内容を自社に適した内容で書き換えます。
+OGPに[土下座している男性の画像][2]を仮置きしていますが、テキストのみの構成に比して転送量が大幅に増加しますので、謝罪用の予算が潤沢な場合を除いてコメントアウトされた方がよろしいかと思います。
+
+謝罪サイトがテンプレートを用いて作成されていることが一般の方々に知られますとさらなる炎上を呼ぶ可能性がございますので、二重チェックするなど内容が問題ないかをよくご確認ください。
+
+
+[1]: http://fukuyuki.net/post-805/
+[2]: http://www.irasutoya.com
