@@ -21,7 +21,6 @@ handlers:
   upload: index\.html
   http_headers:
     Content-Type: text/html
-    Content-Encoding: deflate
   # script: main.app
 
 libraries:
