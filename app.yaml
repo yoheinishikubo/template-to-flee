@@ -19,8 +19,6 @@ handlers:
 - url: /.*
   static_files: index.html
   upload: index\.html
-  http_headers:
-    Content-Type: text/html
   # script: main.app
 
 libraries:
